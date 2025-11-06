@@ -16,7 +16,7 @@ export default function Hero() {
             Geodata Global • Compliant B2B data platform
           </div>
           <h1 className="mt-5 text-4xl md:text-6xl font-semibold tracking-tight text-slate-900">
-            Turn contact data into pipeline with precision
+            A Leading B2B Contact Database Provider
           </h1>
           <p className="mt-4 text-slate-600 text-lg leading-relaxed">
             Verify millions of decision-makers, enrich your CRM, and launch revenue campaigns with confidence. Clean, compliant, and continually refreshed data built for modern GTM teams.
