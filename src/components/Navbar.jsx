@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'Resources', href: '#resources' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '#/' },
+  { label: 'Solutions', href: '#/solutions' },
+  { label: 'Industries', href: '#/industries' },
+  { label: 'Resources', href: '#/resources' },
+  { label: 'Contact', href: '#/contact' },
 ];
 
 export default function Navbar() {
@@ -25,9 +24,11 @@ export default function Navbar() {
       scrolled ? 'backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80 shadow-sm' : 'bg-transparent'
     }`}>
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-        <a href="#home" className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-indigo-500 via-violet-500 to-fuchsia-500" />
-          <span className="font-semibold text-lg tracking-tight">ClearReach Data</span>
+        <a href="#/" className="flex items-center gap-2">
+          <div className="relative h-9 w-9 rounded-xl bg-gradient-to-br from-indigo-500 via-violet-500 to-fuchsia-500 text-white flex items-center justify-center">
+            <span className="font-bold">G</span>
+          </div>
+          <span className="font-semibold text-lg tracking-tight">Geodata Global</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -36,7 +37,7 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
-          <a href="#contact" className="inline-flex items-center rounded-full bg-slate-900 text-white text-sm px-4 py-2 hover:bg-slate-800 transition">
+          <a href="#/contact" className="inline-flex items-center rounded-full bg-slate-900 text-white text-sm px-4 py-2 hover:bg-slate-800 transition">
             Get a demo
           </a>
         </div>
@@ -54,7 +55,7 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <a href="#contact" className="inline-flex items-center justify-center rounded-full bg-slate-900 text-white text-sm px-4 py-2">
+            <a href="#/contact" className="inline-flex items-center justify-center rounded-full bg-slate-900 text-white text-sm px-4 py-2">
               Get a demo
             </a>
           </div>

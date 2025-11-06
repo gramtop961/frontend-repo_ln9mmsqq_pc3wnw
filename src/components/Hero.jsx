@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="max-w-2xl py-28">
           <div className="inline-flex items-center gap-2 rounded-full border bg-white/90 px-3 py-1 text-xs text-slate-600">
             <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            Trusted, compliant B2B data platform
+            Geodata Global • Compliant B2B data platform
           </div>
           <h1 className="mt-5 text-4xl md:text-6xl font-semibold tracking-tight text-slate-900">
             Turn contact data into pipeline with precision
@@ -22,10 +22,10 @@ export default function Hero() {
             Verify millions of decision-makers, enrich your CRM, and launch revenue campaigns with confidence. Clean, compliant, and continually refreshed data built for modern GTM teams.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="#pricing" className="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-medium shadow-sm hover:bg-slate-800">
-              View pricing
+            <a href="#/solutions" className="inline-flex items-center justify-center rounded-full bg-slate-900 text-white px-6 py-3 text-sm font-medium shadow-sm hover:bg-slate-800">
+              Explore solutions
             </a>
-            <a href="#contact" className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-medium hover:bg-slate-50">
+            <a href="#/contact" className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-medium hover:bg-slate-50">
               Book a demo
             </a>
           </div>

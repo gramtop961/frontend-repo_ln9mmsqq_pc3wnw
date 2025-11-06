@@ -1,7 +1,11 @@
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Solutions from './components/Solutions';
-import Pricing from './components/Pricing';
+import Industries from './components/Industries';
+import IndustriesPage from './components/IndustriesPage';
+import ResourcesPage from './components/ResourcesPage';
+import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 
 function ResourceTeasers() {
@@ -20,7 +24,7 @@ function ResourceTeasers() {
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-slate-900">Data hygiene checklist {i}</h3>
                 <p className="mt-2 text-sm text-slate-600">A practical framework for keeping your CRM accurate, enriched, and ready for revenue.</p>
-                <div className="mt-4 text-sm font-medium text-indigo-600 group-hover:text-indigo-700">Read article →</div>
+                <a href="#/resources" className="mt-4 inline-block text-sm font-medium text-indigo-600 group-hover:text-indigo-700">Read article →</a>
               </div>
             </article>
           ))}
@@ -30,15 +34,47 @@ function ResourceTeasers() {
   );
 }
 
+function Home() {
+  return (
+    <>
+      <Hero />
+      <Solutions />
+      <Industries />
+      <ResourceTeasers />
+    </>
+  );
+}
+
 export default function App() {
+  const [route, setRoute] = useState(window.location.hash || '#/');
+
+  useEffect(() => {
+    const onHashChange = () => setRoute(window.location.hash || '#/');
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
+  let content;
+  switch (route) {
+    case '#/industries':
+      content = <IndustriesPage />;
+      break;
+    case '#/resources':
+      content = <ResourcesPage />;
+      break;
+    case '#/contact':
+      content = <ContactPage />;
+      break;
+    case '#/':
+    default:
+      content = <Home />;
+  }
+
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <Navbar />
       <main>
-        <Hero />
-        <Solutions />
-        <ResourceTeasers />
-        <Pricing />
+        {content}
       </main>
       <Footer />
     </div>
